@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<style>
+    canvas {
+        border: 2px solid #000;
+        background: #fff;
+    }
+</style>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exemplo RM</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.slim.js"
+        integrity="sha256-UgvvN8vBkgO0luPSUl2s8TIlOSYRoGFAX4jlCIm9Adc=" crossorigin="anonymous"></script>
+    <script>
+        $(document).ready(function () {
+            var canvas = $("#canvas")[0];
+            var ctx = canvas.getContext("2d");
+
+
+            ctx.shadowColor = "lightblue";
+            ctx.shadowOffsetX = 10;
+            ctx.shadowOffsetY = 10;
+
+            ctx.fillStyle = "blue";
+            ctx.fillRect(20, 20, 100, 100);
+
+
+            ctx.lineWidth = 4;
+            ctx.strokeStyle = "blue";
+            ctx.strokeRect(170, 20, 100, 100);
+
+
+        });
+    </script>
+</head>
+
+<body>
+    <canvas id="canvas" width="400" height="400">
+
+    </canvas>
+</body>
+
+</html>
